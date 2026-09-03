@@ -5,6 +5,11 @@ import PortfolioCard from '../components/PortfolioCard.astro';
 import { getCollection } from 'astro:content';
 
 const projects = await getCollection('portfolio');
+const designSystem = projects.find((project) => project.id === 'design-system');
+const otherProjects = projects.filter((project) => project.id !== 'design-system');
+const orderedProjects = designSystem
+  ? [...otherProjects, designSystem]
+  : otherProjects;
 ---
 
 <Layout title="THE NARRATIVE | Lori Olson — UI/UX Designer-Developer">
@@ -79,7 +84,7 @@ const projects = await getCollection('portfolio');
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {orderedProjects.map((project) => (
             <PortfolioCard project={project} />
           ))}
         </div>

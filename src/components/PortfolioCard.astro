@@ -6,7 +6,8 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { title, issueNumber, category, date, summary, tags } = project.data;
+const { title, icon, category, date, summary, tags,
+  featuredImage, altText, } = project.data;
 const projectSlug = project.slug || project.id;
 const projectUrl = projectSlug === 'design-system' ? '/design-system' : `/portfolio/${projectSlug}`;
 ---
@@ -14,9 +15,16 @@ const projectUrl = projectSlug === 'design-system' ? '/design-system' : `/portfo
 <article class="portfolio-card group relative border border-[var(--color-ink)] p-6 flex flex-col justify-between transition-colors duration-300 hover:border-[var(--color-accent)] bg-[var(--color-paper)]">
   <div>
     <div class="flex justify-between items-center text-xs font-mono mb-3 text-[var(--color-ink-muted)]">
-      <span>{issueNumber}</span>
+      <span class="text-base">{icon}</span>
       <span class="uppercase tracking-wider">{category}</span>
     </div>
+    {featuredImage && (
+      <img
+        src={featuredImage}
+        alt={altText || title}
+        class="w-full aspect-[16/10] object-cover mb-6"
+      />
+    )}
     <h3 class="text-2xl font-serif font-bold mb-3 leading-snug">
       <a href={projectUrl} class="hover:text-[var(--color-accent)] underline decoration-1 underline-offset-4">
         {title}

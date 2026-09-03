@@ -4,7 +4,7 @@ const portfolio = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    issueNumber: z.string(),
+    icon: z.string(),
     category: z.string(),
     date: z.string(),
     summary: z.string(),
