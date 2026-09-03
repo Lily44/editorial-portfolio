@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Masthead from '../components/Masthead.astro';
+---
+
+<Layout title="Design System & Tokens | The Narrative">
+  <div class="max-w-4xl mx-auto">
+    <Masthead />
+    
+    <nav class="mb-8 font-mono text-xs uppercase border-b border-[var(--color-ink)] pb-2">
+      <a href="/" class="hover:text-[var(--color-accent)] underline decoration-1 underline-offset-4">&larr; Return to Front Page</a>
+    </nav>
+
+    <main id="main-content" class="space-y-12 mb-16">
+      <section>
+        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
+          1. Color Palette Tokens
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+          <div class="p-4 border border-[var(--color-ink)] bg-[#ffffff]">
+            <p class="font-bold">Paper (BG)</p>
+            <p>#FFFFFF</p>
+          </div>
+          <div class="p-4 border border-[var(--color-ink)] bg-[#1a1918] text-[#ffffff]">
+            <p class="font-bold">Ink (Text)</p>
+            <p>#1A1918</p>
+          </div>
+          <div class="p-4 border border-[var(--color-ink)] bg-[#54524e] text-white">
+            <p class="font-bold">Muted Ink</p>
+            <p>#54524E</p>
+          </div>
+          <div class="p-4 border border-[var(--color-ink)] bg-[#0065a8] text-white">
+            <p class="font-bold">Press Accent</p>
+            <p>#0065A8</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
+          2. Typography Scale & Drop Caps
+        </h2>
+        <div class="space-y-6">
+          <div>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Editorial Opening Drop Cap (.drop-cap)</span>
+            <p class="drop-cap text-base font-serif leading-relaxed mt-2">
+              Here begins the editorial narrative. The initial letter uses the cobalt blue accent color and floats cleanly against the serif paragraph text.
+            </p>
+          </div>
+          <div>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Masthead / Display (Font Serif 8xl)</span>
+            <p class="text-5xl md:text-7xl font-serif font-black uppercase">Headline Text</p>
+          </div>
+          <div>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Section Heading (Font Serif 3xl)</span>
+            <p class="text-3xl font-serif font-bold">The Quick Brown Fox</p>
+          </div>
+          <div>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Body Copy (Font Serif Base - 16px / 1.6 Line Height)</span>
+            <p class="text-base font-serif">High-contrast, highly readable serif copy optimized for long-form reading and editorial case studies.</p>
+          </div>
+          <div>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Metadata Token (Font Mono XS)</span>
+            <p class="font-mono text-xs uppercase tracking-widest">VOL. 01 — SYSTEM TOKEN 2026</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
+          3. Component Pattern Library
+        </h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-mono text-xs uppercase mb-2">Editorial Tag Badges</h3>
+            <div class="flex gap-2">
+              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">WCAG 2.2</span>
+              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">ASTRO</span>
+              <span class="text-xs font-mono bg-[var(--color-accent)] text-white px-2 py-0.5">FEATURED</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-mono text-xs uppercase mb-2">Rules & Separators</h3>
+            <div class="space-y-2">
+              <div class="border-b border-[var(--color-ink)]"></div>
+              <div class="border-b-4 border-double border-[var(--color-ink)]"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>

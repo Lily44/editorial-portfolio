@@ -1,0 +1,12 @@
+---
+title: "Accessible Component Library"
+issueNumber: "VOL. 01"
+category: "Design System & Dev"
+date: "2026-08-15"
+summary: "An end-to-end editorial component system built to WCAG 2.2 AA standards with fluid typography and tokenized theme rules."
+tags: ["WCAG 2.2", "Astro", "Tailwind CSS", "ARIA"]
+featuredImage: "/images/project-1.jpg"
+altText: "High contrast UI layout showcasing typography scale and form controls."
+---
+
+Case study details on accessible component architecture and keyboard navigation strategy.

@@ -1,0 +1,22 @@
+---
+const formattedDate = new Date().toLocaleDateString('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).toUpperCase();
+---
+
+<header class="border-b-4 border-double border-[var(--color-ink)] pb-4 mb-8 pt-4 sm:pt-6">
+  <div class="flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest mb-2 border-b border-[var(--color-ink)] pb-1 gap-1 sm:gap-0 text-center sm:text-left">
+    <span>EDITION NO. 01</span>
+    <span>{formattedDate}</span>
+    <span>FREE ACCESS</span>
+  </div>
+  <h1 class="text-4xl sm:text-6xl md:text-8xl font-serif font-black text-center tracking-tight uppercase my-2 break-words leading-none">
+    <a href="/">THE NARRATIVE</a>
+  </h1>
+  <p class="text-center font-mono text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[var(--color-ink-muted)] px-2">
+    Portfolio of a Design Engineer | Where Story Meets Code
+  </p>
+</header>

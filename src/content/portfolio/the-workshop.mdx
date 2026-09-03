@@ -1,0 +1,48 @@
+---
+title: "The Workshop"
+issueNumber: "VOL. 02"
+category: "Community Platform"
+date: "2026-08-15"
+summary: "A digital platform for a Minneapolis skill-sharing cooperative featuring GSAP-driven scroll interactions, fluid typography, and accessible component architecture."
+tags: ["HTML5", "CSS Grid", "GSAP", "Chart.js", "WCAG 2.2"]
+featuredImage: "/images/the-workshop.webp"
+altText: "Mobile screen mockups displaying The Workshop community cooperative platform."
+gallery:
+  - src: "/images/twMobile1.png"
+    alt: "The Workshop Mission Statement on Mobile"
+    caption: "Mission Statement"
+  - src: "/images/twMobile2.png"
+    alt: "The Workshop Skill-Sharing Catalog on Mobile"
+    caption: "Skill-Sharing Catalog"
+  - src: "/images/twMobile3.png"
+    alt: "The Workshop Event Repair Cafe Details on Mobile"
+    caption: "Repair Café Events"
+  - src: "/images/twMobile4.png"
+    alt: "The Workshop Featured Mentors Profile on Mobile"
+    caption: "Mentor Profiles"
+---
+import Gallery from '../../components/Gallery.astro';
+
+## Overview
+
+*The Workshop* is a fictional Minneapolis-based skill-sharing cooperative website that demonstrates a comprehensive front-end approach to designing and building for mission-driven organizations.
+
+The site showcases intergenerational learning, featured member profiles, and membership signup through a responsive design system with CSS custom properties, reusable component architecture, and GSAP-driven scroll interactions. Built with vanilla HTML, CSS, and JavaScript, the site prioritizes performance and accessibility (WCAG 2.2 AA) as core design decisions, not afterthoughts.
+
+### Why this Project?
+
+Driven by a passion for mission-led, community-focused initiatives, I designed and developed this platform to demonstrate how interactive web experiences can make public-facing organizations feel more dynamic and engaging. My goal was to leverage subtle animations, data visualizations, and interactive components to encourage user exploration without compromising performant, accessible mobile UX. When complex features—like canvas animations or custom scroll triggers—behave differently across viewports, I prioritize pragmatic layout adjustments and touch-friendly fallbacks to ensure every visitor enjoys a seamless experience regardless of their device.
+
+---
+
+## The Site
+
+View the live site here! [The Workshop](#)
+
+<Gallery images={frontmatter.gallery} />
+
+---
+
+## Reflections
+
+Building this site reinforced that dynamic UI features are only as good as their mobile execution. While combining GSAP ScrollTrigger, Chart.js, and custom canvas elements created a compelling desktop narrative, tuning these libraries for smaller touch screens revealed the nuanced realities of mobile browser behavior. Navigating viewport height shifts (`dvh`), handling touch event propagation on interactive charts, and fine-tuning fluid typography using CSS `clamp()` forced me to approach responsive design not as an afterthought, but as a core architectural constraint. Ultimately, this project sharpened my ability to balance bold, interactive storytelling with high standards for performance, accessibility, and real-world mobile usability.

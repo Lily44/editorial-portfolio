@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Masthead from '../../components/Masthead.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('portfolio');
+  return projects.map((project) => ({
+    params: { slug: project.slug || project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, issueNumber, category, date, summary, tags, featuredImage, altText } = project.data;
+---
+
+<Layout title={`${title} | The Narrative`}>
+  <div class="max-w-4xl mx-auto px-4">
+    <Masthead />
+    
+    <nav class="mb-8 font-mono text-xs uppercase border-b border-[var(--color-ink)] pb-2 flex flex-col sm:flex-row justify-between gap-2 sm:gap-0">
+      <a href="/" class="hover:text-[var(--color-accent)] underline decoration-1 underline-offset-4">&larr; Return to Front Page</a>
+      <span class="text-[var(--color-ink-muted)] sm:text-[var(--color-ink)]">{issueNumber} — {category}</span>
+    </nav>
+
+    <article id="main-content">
+      <header class="mb-8 pb-6 border-b border-[var(--color-ink)]">
+        <span class="text-xs font-mono uppercase text-[var(--color-accent)] font-bold">{category}</span>
+        <h1 class="text-3xl md:text-5xl font-serif font-bold my-4 leading-tight">{title}</h1>
+        <p class="text-lg font-serif text-[var(--color-ink-muted)] mb-4">{summary}</p>
+        <time datetime={date} class="block text-xs font-mono mb-6">Published: {date}</time>
+
+        {featuredImage && (
+          <figure class="mt-6 p-2 bg-white">
+            <img src={featuredImage} alt={altText || title} class="w-full h-auto object-cover" />
+            {altText && (
+              <figcaption class="mt-2 text-xs font-mono text-[var(--color-ink-muted)] text-right">
+                FIG. 01 — {altText}
+              </figcaption>
+            )}
+          </figure>
+        )}
+      </header>
+
+      <div class="prose max-w-[680px] mx-auto font-serif leading-relaxed text-base border-b border-[var(--color-ink)] pb-8 mb-8">
+        <Content />
+      </div>
+
+      <footer class="mb-12 max-w-[680px] mx-auto">
+        <h2 class="text-xs font-mono uppercase tracking-wider mb-3">Topic Taxonomy</h2>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </footer>
+    </article>
+  </div>
+</Layout>

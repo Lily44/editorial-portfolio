@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'portfolio'>;
+}
+
+const { project } = Astro.props;
+const { title, issueNumber, category, date, summary, tags } = project.data;
+const projectSlug = project.slug || project.id;
+---
+
+<article class="portfolio-card group relative border border-[var(--color-ink)] p-6 flex flex-col justify-between transition-colors duration-300 hover:border-[var(--color-accent)] bg-[var(--color-paper)]">
+  <div>
+    <div class="flex justify-between items-center text-xs font-mono mb-3 text-[var(--color-ink-muted)]">
+      <span>{issueNumber}</span>
+      <span class="uppercase tracking-wider">{category}</span>
+    </div>
+    <h3 class="text-2xl font-serif font-bold mb-3 leading-snug">
+      <a href={`/portfolio/${projectSlug}`} class="hover:text-[var(--color-accent)] underline decoration-1 underline-offset-4">
+        {title}
+      </a>
+    </h3>
+    <p class="text-sm leading-relaxed mb-6 font-serif">
+      {summary}
+    </p>
+  </div>
+  <div>
+    <time datetime={date} class="block text-xs font-mono text-[var(--color-ink-muted)] mb-3">
+      Published: {date}
+    </time>
+    <div class="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+</article>

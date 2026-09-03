@@ -1,0 +1,23 @@
+---
+interface Props {
+  images?: Array<{ src: string; alt?: string; caption?: string }>;
+}
+const { images = [] } = Astro.props;
+---
+
+{images && images.length > 0 && (
+  <div class="not-prose my-8 max-w-[510px] mx-auto">
+    <div class="grid grid-cols-2 gap-3">
+      {images.map((img, index) => (
+        <figure class="p-1.5 bg-white">
+          <img src={img.src} alt={img.alt || ''} class="w-full h-auto" />
+          {img.caption && (
+            <figcaption class="mt-1 text-[10px] font-mono text-[var(--color-ink-muted)]">
+              FIG. 0{index + 2} — {img.caption}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  </div>
+)}
