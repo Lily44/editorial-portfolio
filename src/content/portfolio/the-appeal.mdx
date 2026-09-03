@@ -25,24 +25,83 @@ import Gallery from '../../components/Gallery.astro';
 
 ## Overview
 
-*The Workshop* is a fictional Minneapolis-based skill-sharing cooperative website that demonstrates a comprehensive front-end approach to designing and building for mission-driven organizations.
-
-The site showcases intergenerational learning, featured member profiles, and membership signup through a responsive design system with CSS custom properties, reusable component architecture, and GSAP-driven scroll interactions. Built with vanilla HTML, CSS, and JavaScript, the site prioritizes performance and accessibility (WCAG 2.2 AA) as core design decisions, not afterthoughts.
+*The Appeal* (theappeal.org) is a nonprofit investigative news outlet covering policing, courts, prisons, and criminal justice policy in the United States. Its reporting is rigorous and important, and this project focuses on how the site's current structure can create friction for readers. I document recurring UX and information-architecture issues, identify which user needs are most affected, and propose a reorganized information architecture supported by wireframes for three core pages.
 
 ### Why this Project?
 
-Driven by a passion for mission-led, community-focused initiatives, I designed and developed this platform to demonstrate how interactive web experiences can make public-facing organizations feel more dynamic and engaging. My goal was to leverage subtle animations, data visualizations, and interactive components to encourage user exploration without compromising performant, accessible mobile UX. When complex features—like canvas animations or custom scroll triggers—behave differently across viewports, I prioritize pragmatic layout adjustments and touch-friendly fallbacks to ensure every visitor enjoys a seamless experience regardless of their device.
+I selected The Appeal because investigative journalism relies heavily on information discovery. When readers are trying to understand complex topics, the structure of the experience matters as much as the content itself.
 
----
+Because this was an independent portfolio project, I relied on heuristic evaluation and content analysis rather than user testing or analytics data.
 
-## The Site
 
-View the live site here! <a href="https://the-workshop-akw.pages.dev/" target="_blank" rel="noopener noreferrer">The Workshop</a>
+## Pain Points
 
-<Gallery images={frontmatter.gallery} />
+A hands-on audit of theappeal.org identified structural UX issues that share a common theme: the site's information design doesn't consistently match how readers navigate, orient, and decide what to read.
 
----
+Navigation is fragmented across two menus and doesn't persist beyond the homepage, which makes it harder for users to return to where they were. Search is presented in multiple places (in the hamburger menu and again at the bottom of pages), creating inconsistency in how users expect to find it. On article pages, topic context appears only at the end, delaying helpful orientation. On the homepage, a full-width newsletter signup appears before any story content, asking for attention before users can quickly access value.
+
+## Users and Tasks
+
+Rather than redesigning for aesthetics, the work is anchored in three user tasks:
+
+- **Task 1 — Evaluate:** "As a first-time visitor, I want to quickly understand what The Appeal covers so I can decide whether it's worth my time."
+- **Task 2 — Browse:** "As a returning reader, I want to browse the latest stories across all topics so I can catch up on recent coverage."
+- **Task 3 — Search:** "As a researcher, I want to search for coverage of a specific topic or case so I can find relevant articles quickly."
+
+Each element of the information-architecture proposal is tied to at least one of these tasks.
+
+## Current Structure
+The Appeal's existing site structure, mapped from a hands-on audit. Marked nodes indicate problem areas and unclear hierarchy.
+<figure>
+  <img
+    src="/images/theappeal_current_sitemap1.svg"
+    alt="Diagram of The Appeal's current site structure"
+  />
+</figure>
+
+## Proposed Structure
+A redesigned structure built around the user tasks, offering persistent navigation, clear topic context, and an unobstructed path through the content.
+<figure>
+  <img
+    src="/images/theappeal_proposed_sitemap1.svg"
+    alt="Diagram of The Appeal's proposed site structure"
+  />
+</figure>
+## Final Design
+
+**One persistent navigation system.** The two-menu problem was resolved by consolidating into a single global nav; logo on the left as a home link, topic navigation in the center, search visible in the upper right where users expect it. This nav appears on every page, in the same position, with the active topic highlighted. Users always know where they are and always have a way out.
+
+**A mission statement before anything else.** The homepage now opens with a two-sentence description of what The Appeal covers, placed above the hero story. First-time visitors can orient themselves without clicking anywhere. This replaces the newsletter signup, which moves to the bottom of the page.
+
+**Topic context at the top of every article.** The topic label was moved from the bottom of the article page to immediately above the headline, doubling as a back link to the topic page. A breadcrumb trail provides a second path home. Readers are never disoriented about where they are in the site.
+
+**Structured topic pages.** Each topic page now opens with a brief description of what that topic covers, followed by a filterable, dated article list. Sub-topic filters let researchers narrow without resorting to search. Related topics at the bottom replace the dead end that currently exists when a user exhausts a section.
+
+**Newsletter signup.** The newsletter ask appears once per page, at the very bottom, in a consistent location.
+
+**A refreshed color palette.** Anchored by a palette of calm blues, the visual design intentionally builds a sense of institutional trust. For an investigative news platform handling sensitive criminal justice reporting, credibility is paramount. These tones communicate stability and authority quietly, rather than demanding attention. True to a commitment to accessible design, every color pair has been verified for WCAG 2.2 compliance.
+
+<figure>
+  <img
+    src="/images/homepage.svg"
+    alt="Redesigned Appeal Homepage."
+  />
+</figure>
+<figure>
+  <img
+    src="/images/topicpage.svg"
+    alt="Redesigned Appeal Topic page."
+  />
+</figure>
+<figure>
+  <img
+    src="/images/articlepage.svg"
+    alt="Redesigned Appeal Article page."
+  />
+</figure>
 
 ## Reflections
+Redesigning The Appeal was a genuinely enjoyable challenge. The process sharpened my eye for information architecture and reinforced how much structure shapes a reader's experience in a publication before they've read a single word. The part I found most satisfying was the visual design phase, specifically working through color theory to land on a palette that communicates credibility and calm. Getting that emotional register right felt just as important as getting the navigation right.
 
-Building this site reinforced that dynamic UI features are only as good as their mobile execution. While combining GSAP ScrollTrigger, Chart.js, and custom canvas elements created a compelling desktop narrative, tuning these libraries for smaller touch screens revealed the nuanced realities of mobile browser behavior. Navigating viewport height shifts (`dvh`), handling touch event propagation on interactive charts, and fine-tuning fluid typography using CSS `clamp()` forced me to approach responsive design not as an afterthought, but as a core architectural constraint. Ultimately, this project sharpened my ability to balance bold, interactive storytelling with high standards for performance, accessibility, and real-world mobile usability.
+
+
