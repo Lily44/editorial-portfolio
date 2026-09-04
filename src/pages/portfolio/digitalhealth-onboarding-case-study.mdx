@@ -1,0 +1,202 @@
+---
+title: "Digital Health Onboarding | Full Case Study"
+---
+
+import Layout from '../../layouts/Layout.astro';
+
+<Layout title={frontmatter.title}>
+  <div class="max-w-4xl mx-auto px-4">
+    <main id="main-content" class="prose max-w-[680px] mx-auto font-serif leading-relaxed text-base">
+      <p><a href="/portfolio/digitalhealth-onboarding">&larr; Back to project overview</a></p>
+
+      <h1 class="text-3xl md:text-5xl font-serif font-bold leading-tight">Case Study: Digital Health Onboarding</h1>
+
+      <h2>Overview</h2>
+
+      <p><strong>Digital Health Onboarding</strong> is an interactive online course module developed for students entering the digital health field. The 60-minute experience guides emerging healthcare professionals through critical concepts, best practices, legal considerations, and real-world scenarios they would encounter delivering care remotely.</p>
+
+      <p><strong>Role:</strong> Designer (UX/UI) + Frontend Developer.<br />
+      <strong>Collaborators:</strong> Subject Matter Expert (healthcare/telehealth content).<br />
+      <strong>Tech Stack:</strong> HTML/CSS/JavaScript (custom).<br />
+      <strong>Duration:</strong> 3-6 months.<br />
+      <strong>Status:</strong> Live and actively used in current training.</p>
+
+      <hr />
+
+      <h2>The Problem</h2>
+
+      <p>The training relied heavily on <strong>dense text-based content</strong> - long paragraphs and traditional page layouts that felt disconnected from how healthcare professionals actually absorb and retain critical procedural information.</p>
+
+      <p>Emerging healthcare practitioners in digital health needed to understand:</p>
+      <ul>
+        <li>Specialized terminology (VPN, encryption, EHR, and more).</li>
+        <li>Best practices (confidentiality, privacy, and professional conduct).</li>
+        <li>Legal and regulatory requirements.</li>
+        <li>Real-world scenarios and how to handle edge cases.</li>
+      </ul>
+
+      <p><strong>The challenge:</strong> How do you make complex, compliance-heavy content engaging and memorable for busy students in a fast-paced learning environment?</p>
+
+      <figure>
+        <img src="/images/telehealth-intro.png" alt="Digital Health Onboarding introduction screen with video overlay." />
+      </figure>
+
+      <p>Early feedback indicated students were:</p>
+      <ul>
+        <li>Struggling to retain key concepts from text-heavy sections.</li>
+        <li>Not feeling confident they could apply knowledge to real situations.</li>
+        <li>Finding navigation through multiple topics confusing and overwhelming.</li>
+        <li>Lacking context for why certain practices mattered.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Design Approach</h2>
+
+      <p>Rather than simply prettifying existing content, I worked with the subject matter expert to <strong>restructure the information architecture</strong> around how healthcare practitioners actually think about their work.</p>
+
+      <h3>Information Architecture &amp; Navigation</h3>
+
+      <p>The module is organized into <strong>seven progressive sections</strong>, each building on the previous:</p>
+      <ol>
+        <li><strong>Introduction</strong> - Video overview of digital health's relevance and scope.</li>
+        <li><strong>Digital Health Terms</strong> - Flip cards for domain-specific terminology</li>
+        <li><strong>Best Practices</strong> - Accordion-style guidance on confidentiality, privacy, safety, consent, assessments, and documentation</li>
+        <li><strong>Getting Started &amp; Supervision</strong> - Practical setup and workflow guidance</li>
+        <li><strong>Laws and Guidelines</strong> - Expandable sections for regulatory compliance</li>
+        <li><strong>Special Considerations</strong> - Scenario-based cards showing real situations</li>
+        <li><strong>Conclusion</strong> - Reinforcement and next steps</li>
+      </ol>
+
+      <p><strong>Why this structure works:</strong></p>
+      <ul>
+        <li><strong>Tabbed navigation</strong> lets users jump to relevant sections without scrolling through irrelevant content.</li>
+        <li><strong>Progressive disclosure</strong> reduces cognitive load by revealing details only when needed.</li>
+        <li><strong>Scenario-first design</strong> connects abstract rules to real dilemmas.</li>
+      </ul>
+
+      <figure>
+        <img src="/images/telehealth-navigation.png" alt="Module navigation showing seven progressive sections." />
+      </figure>
+
+      <h3>Visual Design &amp; Interactive Patterns</h3>
+
+      <h4>Flip Cards (Digital health Terms)</h4>
+      <p>Eight key terms are presented as interactive flip cards. Selecting a card reveals the definition and context. This pattern reinforces vocabulary through active engagement and supports different learning preferences.</p>
+
+      <figure>
+        <img src="/images/telehealth-flipcards.png" alt="Flip cards interface showing terminology definitions with color-coded bars." />
+      </figure>
+
+
+      <h4>Accordion Sections (Best Practices)</h4>
+      <p>Nine best-practice topics are organized as expandable panels, each with a clear heading and icon, concise guidance, and links to related resources. This prevents wall-of-text fatigue and lets learners focus on what is immediately relevant.</p>
+
+      <figure>
+        <img src="/images/telehealth-bestpractices.png" alt="Best practices section with expandable accordion panels." />
+      </figure>
+
+      <h4>Scenario Cards (Special Considerations)</h4>
+      <p>Seven real-world situations are presented as image and text cards:</p>
+      <ul>
+        <li><strong>Working with multiple clients</strong> - Managing individual attention and fairness.</li>
+        <li><strong>Adolescents or children</strong> - Consent and privacy with minors.</li>
+        <li><strong>Crisis assessments</strong> - Responding to emergencies over video.</li>
+        <li><strong>Patient impairment</strong> - Handling substance use or altered mental states.</li>
+        <li><strong>Disabilities or special needs</strong> - Accessibility and accommodation.</li>
+        <li><strong>Lack of confidentiality</strong> - Interruptions and family presence.</li>
+        <li><strong>Unprofessional behavior</strong> - Boundaries and professionalism standards.</li>
+      </ul>
+
+      <figure>
+        <img src="/images/telehealth-scenarios.png" alt="Special Considerations section with scenario cards." />
+      </figure>
+
+      <hr />
+
+      <h2>Key Design Decisions &amp; Rationale</h2>
+
+      <h3>1. Interactive Over Passive</h3>
+      <p>Flip cards, expandable sections, and selectable scenario cards make learning <em>active</em> rather than reading-focused. Healthcare professionals are task-focused; they need to do something with the information, not just absorb it passively.</p>
+
+      <h3>2. Visual Hierarchy Through Color &amp; Layout</h3>
+      <p>Consistent use of color, spacing, and typography creates clear information hierarchy. Students immediately understand what is important and how sections relate to each other, reducing cognitive load.</p>
+
+      <h3>3. Accessibility (WCAG 2.1 AA Compliance)</h3>
+      <ul>
+        <li><strong>Keyboard navigation</strong> - All interactive elements are fully keyboard accessible.</li>
+        <li><strong>Semantic HTML</strong> - Proper heading hierarchy, ARIA labels, and form semantics.</li>
+        <li><strong>Color contrast</strong> - All text meets WCAG AA standards.</li>
+        <li><strong>Focus indicators</strong> - Clear, visible focus states on interactive elements.</li>
+        <li><strong>Video accessibility</strong> - Video transcripts provided for the introduction.</li>
+      </ul>
+      <p>Accessibility is essential for everyone and aligns with regulatory compliance expectations.</p>
+
+      <h3>4. Progressive Disclosure</h3>
+      <p>Information is revealed in layers - students see headlines first and expand only what is relevant. This prevents cognitive overload by breaking complex topics into digestible chunks.</p>
+
+      <h3>5. Scenario-Based Learning</h3>
+      <p>Instead of abstract rules, the Special Considerations section presents situations first, then guidance. This makes the module memorable and immediately applicable.</p>
+
+      <hr />
+
+      <h2>Design Process &amp; Collaboration</h2>
+      <p><strong>Discovery:</strong> The subject matter expert provided existing training materials, learning objectives, and compliance requirements. Through conversations, I identified where information density was creating comprehension barriers.</p>
+      <p><strong>Wireframing &amp; Structure:</strong> I mapped out the information architecture, proposing a tab-based structure with progressive disclosure patterns. The SME validated that this reflected best practice for how students consumed the content.</p>
+      <p><strong>Design &amp; Prototyping:</strong> I created mid-fidelity comps showing the interactive patterns and proposed a color system. The SME reviewed for accuracy and tone.</p>
+      <p><strong>Development &amp; Iteration:</strong> I built the module in custom HTML/CSS/JavaScript, focusing on semantic markup for accessibility from day one.</p>
+      <p><strong>Feedback &amp; Polish:</strong> SMEs, colleagues, and a student sampling tested the module, providing feedback on clarity, navigation, and relevance.</p>
+
+      <h2>Outcomes &amp; Impact</h2>
+
+      <h3>User Feedback</h3>
+      <ul>
+        <li><strong>Engagement:</strong> Students reported enjoying the interactive elements.</li>
+        <li><strong>Confidence:</strong> They felt more confident handling telehealth situations.</li>
+        <li><strong>Retention:</strong> The students retained key concepts better than with previous text-heavy materials.</li>
+        <li><strong>Applicability:</strong> Many students reported applying the Special Considerations guidance in real situations.</li>
+      </ul>
+
+      <h3>Usage Metrics</h3>
+      <ul>
+        <li>The module became a standard part of the digital health training.</li>
+        <li>Completion rates were higher than comparable text-based modules.</li>
+        <li>Low dropout rates indicated sustained engagement throughout the experience.</li>
+      </ul>
+
+      <h2>Technical Implementation</h2>
+      <p>Built with <strong>semantic HTML, custom CSS, and vanilla JavaScript</strong>, the module prioritizes:</p>
+      <ul>
+        <li><strong>Performance:</strong> Optimized images, lazy loading, and minimal external dependencies.</li>
+        <li><strong>Maintainability:</strong> Consistent naming conventions and modular design.</li>
+        <li><strong>Accessibility:</strong> ARIA labels, keyboard handlers, focus management, semantic headings, and high-contrast text.</li>
+        <li><strong>Responsiveness:</strong> Fluid layouts and touch-friendly targets for mobile learners.</li>
+      </ul>
+
+      <h2>What I'd Do Differently</h2>
+      <ol>
+        <li><strong>User Testing Upfront:</strong> Earlier usability testing would have validated navigation preferences sooner.</li>
+        <li><strong>Analytics &amp; Tracking:</strong> Detailed learning analytics would provide richer data on what content resonates most.</li>
+        <li><strong>Personalization:</strong> A student preference option could tailor the learning path.</li>
+      </ol>
+
+      <h2>Key Takeaways</h2>
+      <p>This project demonstrates how <strong>strategic information architecture, thoughtful interaction design, and accessibility-first development</strong> can transform compliance and training content from tedious to engaging.</p>
+      <ul>
+        <li><strong>For healthcare educators:</strong> Interactive, scenario-based design makes complex learning stick.</li>
+        <li><strong>For designers working with subject matter experts:</strong> The best designs come from understanding how the audience thinks about and applies the material.</li>
+        <li><strong>For accessibility:</strong> Building inclusivity from day one produces better design for everyone.</li>
+      </ul>
+
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li><strong>UX/UI Design:</strong> Information architecture, interaction patterns, visual hierarchy, and accessibility.</li>
+        <li><strong>Frontend Development:</strong> Semantic HTML, responsive CSS, and vanilla JavaScript.</li>
+        <li><strong>Healthcare Education Design:</strong> Learning theory and compliance-aware content design.</li>
+        <li><strong>Collaboration:</strong> Working effectively with subject matter experts.</li>
+        <li><strong>Accessibility:</strong> WCAG 2.1 AA compliance and inclusive design thinking.</li>
+      </ul>
+
+    </main>
+  </div>
+</Layout>
