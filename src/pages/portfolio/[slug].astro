@@ -25,7 +25,7 @@ const { title, icon, category, date, summary, tags, featuredImage, altText } = p
       <span class="text-[var(--color-ink-muted)] sm:text-[var(--color-ink)]">{icon} — {category}</span>
     </nav>
 
-    <article id="main-content">
+    <main id="main-content">
       <header class="mb-8 pb-6 border-b border-[var(--color-ink)]">
         <span class="text-xs font-mono uppercase text-[var(--color-accent)] font-bold">{category}</span>
         <h1 class="text-3xl md:text-5xl font-serif font-bold my-4 leading-tight">{title}</h1>
@@ -58,6 +58,6 @@ const { title, icon, category, date, summary, tags, featuredImage, altText } = p
           ))}
         </div>
       </footer>
-    </article>
+    </main>
   </div>
 </Layout>
