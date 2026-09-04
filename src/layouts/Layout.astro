@@ -17,9 +17,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="min-h-screen p-4 md:p-8">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-[var(--color-paper)] focus:text-[var(--color-ink)] border-2 border-[var(--color-ink)]">
-      Skip to main content
-    </a>
+    <div role="region" aria-label="Accessibility tools">
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-[var(--color-paper)] focus:text-[var(--color-ink)] border-2 border-[var(--color-ink)]">
+        Skip to main content
+      </a>
+    </div>
     <slot />
   </body>
 </html>
