@@ -13,8 +13,14 @@ const formattedDate = new Date().toLocaleDateString('en-US', {
     <span>{formattedDate}</span>
     <span>FREE ACCESS</span>
   </div>
-  <h1 class="text-4xl sm:text-6xl md:text-8xl font-serif font-black text-center tracking-tight uppercase my-2 break-words leading-none">
-    <a href="/">THE NARRATIVE</a>
+  <h1 class="my-2 text-center">
+    <a href="/" aria-label="The Narrative home">
+      <img
+        src="/images/masthead.svg"
+        alt="The Narrative."
+        class="mx-auto h-auto w-full max-w-4xl"
+      />
+    </a>
   </h1>
   <p class="text-center font-mono text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[var(--color-ink-muted)] px-2">
     Portfolio of a Design Engineer | Where Story Meets Code

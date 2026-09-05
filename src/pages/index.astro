@@ -5,14 +5,12 @@ import PortfolioCard from '../components/PortfolioCard.astro';
 import { getCollection } from 'astro:content';
 
 const projects = await getCollection('portfolio');
-const designSystem = projects.find((project) => project.id === 'design-system');
-const otherProjects = projects.filter((project) => project.id !== 'design-system');
-const orderedProjects = designSystem
-  ? [...otherProjects, designSystem]
-  : otherProjects;
+const orderedProjects = [...projects].sort(
+  (firstProject, secondProject) => firstProject.data.order - secondProject.data.order
+);
 ---
 
-<Layout title="THE NARRATIVE | Lori Olson — UI/UX Designer-Developer">
+<Layout title="THE NARRATIVE | Lori Olson — UI/UX Design Engineer">
   <div class="max-w-6xl mx-auto">
     <Masthead />
 
@@ -30,7 +28,7 @@ const orderedProjects = designSystem
             <p class="text-base md:text-lg font-serif leading-relaxed mb-4">
               Welcome to my portfolio. I specialize in bridging the gap between high-impact visual design and clean, accessible front-end architecture. With a deep commitment to WCAG guidelines, performance, and modern editorial typography, I build web solutions that everyone can navigate seamlessly.
             </p>
-            <p class="text-base font-serif leading-relaxed">
+            <p class="text-base md:text-lg font-serif leading-relaxed mb-4">
               Whether refactoring complex interface components for WCAG 2.2 AA compliance or engineering responsive design systems, my focus remains grounded in usability, craft, and code clarity.
             </p>
           </div>
@@ -53,19 +51,21 @@ const orderedProjects = designSystem
             <p class="text-xs font-serif leading-relaxed text-[var(--color-ink-muted)] mb-3">
               Looking for teams where narrative and craft matter equally: public media, journalism, nonprofits, mission-driven organizations.
             </p>
-            <p class="text-[11px] font-mono uppercase tracking-wider font-bold text-[var(--color-ink-muted)] border-t border-[var(--color-ink)] pt-2">
+            <p class="text-[11px] font-mono uppercase tracking-wider font-bold text-[var(--color-ink-muted)] pt-2">
               Minneapolis-based. Always building something.
             </p>
           </div>
 
           <!-- Bottom: Accessibility Guarantee -->
-          <div class="border-t border-[var(--color-ink)] pt-4">
+          <div class="border-[var(--color-ink)] pt-4">
             <h3 class="text-sm font-serif font-bold border-b border-[var(--color-ink)] pb-1 mb-2 uppercase tracking-wide">
-              Accessibility Guarantee
+              Accessibility
             </h3>
             <p class="text-xs font-serif leading-relaxed mb-3 text-[var(--color-ink-muted)]">
               This publication is engineered to adhere strictly to WCAG 2.2 Level AA guidelines. It features keyboard-operable controls, explicit contrast ratios exceeding 15:1, screen-reader semantics, and respected motion preferences.
             </p>
+            <p class="text-xs font-serif leading-relaxed mb-3 text-[var(--color-ink-muted)]">I welcome your feedback on the accessibility of this site. Please let me know if you encounter accessibility barriers: <a class="text-[var(--color-accent)] underline underline-offset-4" href="mailto:lolsonportfolio@icloud.com">lolsonportfolio@icloud.com</a></p>
+
             <span class="text-[11px] font-mono uppercase font-bold text-[var(--color-accent)] block">
               WCAG 2.2 AA Compliant Edition
             </span>
