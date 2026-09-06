@@ -12,34 +12,39 @@ import Masthead from '../components/Masthead.astro';
     </nav>
 
     <main id="main-content" class="space-y-12 mb-16">
-      <section>
-        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
-          1. Color Palette Tokens
+      <section aria-labelledby="design-heading" class="space-y-8">
+        <h2 id="design-heading" class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2">
+          1. Design
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
-          <div class="p-4 border border-[var(--color-ink)] bg-[#ffffff]">
-            <p class="font-bold">Paper (BG)</p>
-            <p>#FFFFFF</p>
-          </div>
-          <div class="p-4 border border-[var(--color-ink)] bg-[#1a1918] text-[#ffffff]">
-            <p class="font-bold">Ink (Text)</p>
-            <p>#1A1918</p>
-          </div>
-          <div class="p-4 border border-[var(--color-ink)] bg-[#54524e] text-white">
-            <p class="font-bold">Muted Ink</p>
-            <p>#54524E</p>
-          </div>
-          <div class="p-4 border border-[var(--color-ink)] bg-[#0065a8] text-white">
-            <p class="font-bold">Press Accent</p>
-            <p>#0065A8</p>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">
+            Color Palette Tokens
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="p-4 border border-[var(--color-ink)] bg-[#ffffff]">
+              <p class="font-bold">Paper (BG)</p>
+              <p>#FFFFFF</p>
+            </div>
+            <div class="p-4 border border-[var(--color-ink)] bg-[#1a1918] text-[#ffffff]">
+              <p class="font-bold">Ink (Text)</p>
+              <p>#1A1918</p>
+            </div>
+            <div class="p-4 border border-[var(--color-ink)] bg-[#54524e] text-white">
+              <p class="font-bold">Muted Ink</p>
+              <p>#54524E</p>
+            </div>
+            <div class="p-4 border border-[var(--color-ink)] bg-[#0065a8] text-white">
+              <p class="font-bold">Press Accent</p>
+              <p>#0065A8</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section>
-        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
-          2. Typography Scale & Drop Caps
-        </h2>
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">
+            Typography, Type Scale &amp; Metadata
+          </h3>
         <div class="space-y-6">
           <div>
             <span class="font-mono text-xs text-[var(--color-ink-muted)]">Editorial Opening Drop Cap (.drop-cap)</span>
@@ -48,46 +53,124 @@ import Masthead from '../components/Masthead.astro';
             </p>
           </div>
           <div>
-            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Masthead / Display (Font Serif 8xl)</span>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Masthead / Display</span>
             <p class="text-5xl md:text-7xl font-serif font-black uppercase">Headline Text</p>
           </div>
           <div>
-            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Section Heading (Font Serif 3xl)</span>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Section Heading</span>
             <p class="text-3xl font-serif font-bold">The Quick Brown Fox</p>
           </div>
           <div>
-            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Body Copy (Font Serif Base - 16px / 1.6 Line Height)</span>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Body Copy</span>
             <p class="text-base font-serif">High-contrast, highly readable serif copy optimized for long-form reading and editorial case studies.</p>
           </div>
           <div>
-            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Metadata Token (Font Mono XS)</span>
-            <p class="font-mono text-xs uppercase tracking-widest">VOL. 01 — SYSTEM TOKEN 2026</p>
+            <span class="font-mono text-xs text-[var(--color-ink-muted)]">Metadata Token</span>
+            <p class="font-mono text-xs uppercase tracking-widest">¶ UX/UI CASE STUDY | PUBLISHED 2025</p>
           </div>
+        </div>
         </div>
       </section>
 
-      <section>
-        <h2 class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2 mb-6">
-          3. Component Pattern Library
+      <section aria-labelledby="components-heading" class="space-y-8">
+        <h2 id="components-heading" class="text-2xl font-serif font-bold uppercase border-b-2 border-[var(--color-ink)] pb-2">
+          2. Components
         </h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="font-mono text-xs uppercase mb-2">Editorial Tag Badges</h3>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">WCAG 2.2</span>
-              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">ASTRO</span>
-              <span class="text-xs font-mono bg-[var(--color-accent)] text-white px-2 py-0.5">FEATURED</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Buttons</h3>
+        <div class="border border-[var(--color-ink-muted)] p-6 space-y-4">
+          <div class="flex flex-wrap gap-3">
+            <button type="button" class="bg-[var(--color-ink)] text-[var(--color-paper)] px-4 py-2 font-mono text-xs uppercase hover:bg-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2">
+              Primary Action
+            </button>
+            <button type="button" class="border border-[var(--color-ink)] px-4 py-2 font-mono text-xs uppercase hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2">
+              Secondary Action
+            </button>
+            <button type="button" class="text-[var(--color-accent)] underline underline-offset-4 font-mono text-xs uppercase focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2">
+              Text Action
+            </button>
+          </div>
+          <p class="font-mono text-xs text-[var(--color-ink-muted)]">Primary, secondary, and text action variants.</p>
+        </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Portfolio Card</h3>
+        <div class="max-w-md">
+          <article class="border border-[var(--color-ink-muted)] p-6 flex flex-col justify-between bg-[var(--color-paper)]">
+            <div>
+              <div class="flex justify-between items-center text-xs font-mono mb-3 text-[var(--color-ink-muted)]">
+                <span class="text-base text-[var(--color-accent)]">¶</span>
+                <span class="uppercase tracking-wider">Case Study</span>
+              </div>
+              <img src="/images/theNarrativeCard.webp" alt="Editorial interface component preview" class="w-full aspect-[16/10] object-cover mb-6" />
+              <h3 class="text-2xl font-serif font-bold mb-3 leading-snug">
+                <a href="/" class="hover:text-[var(--color-accent)] underline decoration-1 underline-offset-4">Editorial Card Title</a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-6 font-serif">A reusable card for presenting selected work with image, category, title, and summary.</p>
             </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">UX/UI</span>
+              <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">ACCESSIBILITY</span>
+            </div>
+          </article>
+        </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Tags and Badges</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">UX/UI</span>
+          <span class="text-xs font-mono bg-[var(--color-ink)] text-[var(--color-paper)] px-2 py-0.5">ACCESSIBILITY</span>
+          <span class="text-xs font-mono bg-[var(--color-accent)] text-white px-2 py-0.5">FEATURED</span>
+          <span class="text-xs font-mono border border-[var(--color-ink-muted)] px-2 py-0.5">DRAFT</span>
+        </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Figure and Image Treatment</h3>
+        <figure class="border border-[var(--color-ink-muted)] p-2">
+          <img src="/images/landingPageDesktop.webp" alt="Editorial interface showing a structured content layout" class="w-full h-auto object-cover" />
+          <figcaption class="mt-2 px-2 pb-1 text-xs font-mono text-[var(--color-ink-muted)]">
+            FIG. 01 - Editorial image with an optional caption.
+          </figcaption>
+        </figure>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Link States</h3>
+        <div class="space-y-3 font-serif">
+          <p><a href="/" class="text-[var(--color-accent)] underline underline-offset-4">Inline editorial link</a></p>
+          <p><a href="/" class="font-mono text-xs uppercase text-[var(--color-accent)] underline underline-offset-4">Navigation link</a></p>
+          <p><a href="/" class="font-serif font-bold text-[var(--color-ink)] underline decoration-1 underline-offset-4 hover:text-[var(--color-accent)]">Card title link</a></p>
+        </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif font-bold uppercase border-b border-[var(--color-ink)] pb-2 mb-6">Form Controls</h3>
+        <form class="max-w-xl space-y-5 border border-[var(--color-ink-muted)] p-6">
+          <div>
+            <label for="component-name" class="block font-mono text-xs uppercase mb-2">Name</label>
+            <input id="component-name" name="name" type="text" placeholder="Your name" class="w-full border border-[var(--color-ink-muted)] bg-[var(--color-paper)] px-3 py-2 font-serif focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]" />
           </div>
           <div>
-            <h3 class="font-mono text-xs uppercase mb-2">Rules & Separators</h3>
-            <div class="space-y-2">
-              <div class="border-b border-[var(--color-ink)]"></div>
-              <div class="border-b-4 border-double border-[var(--color-ink)]"></div>
-            </div>
+            <label for="component-email" class="block font-mono text-xs uppercase mb-2">Email address</label>
+            <input id="component-email" name="email" type="email" placeholder="you@example.com" class="w-full border border-[var(--color-ink-muted)] bg-[var(--color-paper)] px-3 py-2 font-serif focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]" />
           </div>
+          <div>
+            <label for="component-message" class="block font-mono text-xs uppercase mb-2">Message</label>
+            <textarea id="component-message" name="message" rows="4" placeholder="Write a message" class="w-full border border-[var(--color-ink-muted)] bg-[var(--color-paper)] px-3 py-2 font-serif focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"></textarea>
+          </div>
+          <button type="submit" class="bg-[var(--color-ink)] text-[var(--color-paper)] px-4 py-2 font-mono text-xs uppercase hover:bg-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2">
+            Submit Form
+          </button>
+        </form>
+        </div>
         </div>
       </section>
+
     </main>
   </div>
 </Layout>
