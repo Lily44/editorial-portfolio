@@ -1,0 +1,214 @@
+---
+title: "Relationship Building for Justice | Full Case Study"
+---
+
+import Layout from '../../layouts/Layout.astro';
+
+<Layout title={frontmatter.title}>
+  <div class="max-w-4xl mx-auto px-4">
+    <main id="main-content" class="prose max-w-[680px] mx-auto font-serif leading-relaxed text-base">
+      <p><a href="/portfolio/relationship-building-justice">&larr; Back to project overview</a></p>
+
+      <h1 class="text-3xl md:text-5xl font-serif font-bold leading-tight">Case Study: Relationship Building for Justice</h1>
+
+      <h2>Overview</h2>
+
+      <p><strong>Relationship Building for Justice</strong> is an interactive criminal justice learning module developed collaboratively with instructional designers and SMEs to solve real problems in the existing course: low engagement, poor knowledge retention, and cognitive overload from text-heavy delivery. The 30-minute module was designed from scratch to increase engagement, support retention, manage cognitive load, and provide a richer media experience.</p>
+
+      <p>My role was as a design partner: contributing to the pedagogical structure (how should content be sequenced? where are natural breaks?), then translating that vision into information architecture, visual design, and web implementation.</p>
+
+      <p><strong>Role:</strong> Designer (UX/UI) + Frontend Developer, Innovation Partner.<br />
+      <strong>Collaborators:</strong> Instructional Designers, Subject Matter Experts (criminal justice professionals).<br />
+      <strong>Tech Stack:</strong> HTML/CSS/JavaScript (custom).<br />
+      <strong>Duration:</strong> 4-7 months.<br />
+      <strong>Status:</strong> Live and actively used in the course.</p>
+
+      <hr />
+
+      <h2>The Problem: Visual Design & Cognitive Load</h2>
+
+      <p>The existing criminal justice course relied on traditional delivery methods: readings, lectures, text-based assessments. For soft-skills topics like relationship building, critical for probation officer success, this approach wasn't working.</p>
+
+      <p>Instructional designers and SMEs identified the core problems:</p>
+      <ul>
+        <li><strong>Engagement was low -</strong> Text-heavy content felt disconnected from the lived reality of probation work.</li>
+        <li><strong>Retention was weak -</strong> Learners struggled to remember abstract guidance after the course ended.</li>
+        <li><strong>Cognitive overload -</strong> Dense reading assignments and lectures made learning feel burdensome, not inspiring.</li>
+        <li><strong>Limited media presence -</strong> The course lacked visual, kinesthetic, and narrative elements that support different learning styles and maintain attention.</li>
+        <li><strong>Applicability gap -</strong> Learners understood concepts intellectually but didn't feel confident applying them to real situations.</li>
+      </ul>
+
+      <p><strong>The design challenge:</strong> Could we create an entirely new module, a richer, more engaging learning experience, that would increase engagement, support retention, manage cognitive load, and model how the rest of the course could evolve?</p>
+
+      <hr />
+
+      <h2>Design Approach: Visual Hierarchy &amp; Cognitive Load</h2>
+
+      <p>Rather than incrementally improve existing content, instructional designers, SMEs, and I collaboratively designed a new module from the ground up. The pedagogical strategy was determined in partnership: How should content be sequenced to support learning? Where should expert presence appear? What role should scenarios play? How do we balance information with pacing?</p>
+
+      <p>Once we agreed on pedagogical structure, my role was to translate that strategy into visual/UX design and web implementation—ensuring the resulting experience managed cognitive load, supported retention, and created an engaging learning environment.</p>
+
+      <h3>Information Architecture &amp; Spatial Organization</h3>
+
+      <p>Rather than a linear scroll through 13 sections, I reorganized the visual presentation to create clear <strong>content groupings</strong> and <strong>visual pacing</strong>:</p>
+
+      <ul>
+        <li><strong>Hero Section (Lead Expert Video)</strong> - Takes up full viewport. Establishes authenticity and emotional connection immediately. Student knows: "This is peer teaching, not a lecture."</li>
+        <li><strong>Content Blocks with Breathing Room</strong> - Framework, communication foundation, and scenarios are each given separate visual blocks with whitespace, clear heading hierarchy, and distinct visual treatment.</li>
+        <li><strong>Data Visualization as Visual Anchor</strong> - The 69% statistic gets prominent positioning with animation, creating a memorable visual moment rather than buried text.</li>
+        <li><strong>Expert Videos Distributed, Not Clustered</strong> - Rather than group all videos together, secondary expert videos are placed contextually - after scenarios they address, so learners understand the connection.</li>
+        <li><strong>Knowledge Checks as Natural Pauses</strong> - Rather than feel like an assessment, knowledge checks are positioned as reflective moments in the flow. They're spaced so learners don't feel "tested" but rather "checking in."</li>
+        <li><strong>Pull Quotes as Moments of Resonance</strong> - Full-bleed quotes break up content and create visual/emotional punctuation, not just decorative elements.</li>
+        <li><strong>Conclusion with Clear Next Steps</strong> - Doesn't feel abrupt; it's a natural transition from content to application.</li>
+      </ul>
+
+      <p><strong>Why this visual organization works:</strong></p>
+      <ul>
+        <li><strong>Clear visual hierarchy</strong> tells students what's important and what's supporting detail.</li>
+        <li><strong>Whitespace and pacing</strong> make complex content feel manageable, not overwhelming.</li>
+        <li><strong>Content grouping</strong> creates visual "stopping points" so students can absorb sections without feeling lost in a wall of information.</li>
+        <li><strong>Contextual placement</strong> connects expert advice to the scenarios they address, making content feel integrated rather than scattered.</li>
+        <li><strong>Visual variation</strong> (video, text, data, scenarios, quotes) keeps attention without relying on flashy design; each content type has a purpose.</li>
+      </ul>
+
+      <figure>
+        <img src="/images/rbjLanding.webp" alt="Relationship Building for Justice hero." />
+      </figure>
+
+      <h3>Visual Design: Layout, Hierarchy &amp; Clarity</h3>
+
+      <h4>Hero Video Layout</h4>
+      <p>The primary expert video takes up substantial visual real estate creating a focal point at the start of the module. This design decision says: "This person is important. Listen." It's not buried in the page; it's the visual anchor. The layout prioritizes the human connection over instructional framing.</p>
+
+      <figure class="mb-8">
+        <img src="/images/rbjFeatureVid.webp" alt="Relationship Building for Justice feature video." />
+      </figure>
+
+      <h4>Data Visualization as Visual Anchor</h4>
+      <p>The 69% statistic could have been a paragraph of text. Instead, I designed it as an animated donut chart that reveals on scroll. Why? The animation creates a memorable visual moment, and the scale of the number (nearly 7 in 10) has emotional weight. The design makes the data <em>feel</em> important, not just factually stated. CSS animation is used purposefully, it reveals the statistic progressively, holding attention.</p>
+
+      <h4>Flip Cards: Acronym-Based Learning Through Interaction</h4>
+      <p>This section introduces a key acronym through interactive flip cards. Each card displays an animated letter icon on the front; flipping reveals the associated definition or guidance. The acronym itself becomes a memory aid, students retain the concept framework as a single, memorable word rather than a scattered list. The interactive flip mechanism makes learning active and reinforces the acronym structure through repetition.</p>
+
+      <figure class="mb-8">
+        <img src="/images/rbjCards.webp" alt="Relationship Building for Justice flip cards." />
+      </figure>
+
+      <h4>Knowledge Checks: Assessment Without Friction</h4>
+      <p>Knowledge checks are integrated into the flow, not segregated as separate sections. The design treats them as reflective moments, not "tests." Clear button states, readable multiple-choice text, and helpful feedback messaging. All designed for web usability best practices (contrast, touch targets, focus states). This removes friction from interaction.</p>
+
+      <h4>Pull Quotes as Visual Breathing Moments</h4>
+      <p>Instead of burying expert quotes in body text, full-bleed quote sections interrupt the flow visually. They're full-width, centered, with generous whitespace. This design creates <em>pacing</em> in the experience, moments to pause and absorb. The visual hierarchy of a quote section signals: "This is important. Reflect here."</p>
+
+      <figure>
+        <img src="/images/rbjPQ.webp" alt="Relationship Building for Justice full-bleed expert quote." />
+      </figure>
+
+      <h4>Tooltips: Contextual Support Without Clutter</h4>
+      <p>Key concepts trigger tooltips on hover/tap rather than defining terms inline. This design choice reduces visual clutter while supporting varied expertise levels. An experienced probation officer skips the tooltip; a new hire gets contextual support. It's a web pattern that respects user agency.</p>
+
+      <figure>
+        <img src="/images/rbjTooltips.webp" alt="Relationship Building for Justice tool tip cards." />
+      </figure>
+
+      <h4>CSS Animations for Meaning, Not Decoration</h4>
+      <p>Every animation serves a purpose: the donut chart animation reveals the statistic progressively; framework elements fade in to indicate progression; emphasis boxes use subtle motion to draw attention without distraction. Critically, all animations respect the <code>prefers-reduced-motion</code> media query—users with motion sensitivity aren't forced to watch animated content. Animation is a design tool, not a distraction.</p>
+
+      <h3>Accessibility as Design Practice</h3>
+
+      <p><strong>Video captions</strong> — Captions serve diverse audiences: deaf and hard of hearing users, workers in noisy field offices, people who prefer reading alongside audio, and anyone in situations where sound isn't practical or desirable. Captions also improve comprehension for everyone. Rather than a special accommodation, captions are foundational to accessible design.</p>
+
+      <p><strong>Semantic HTML</strong> — Proper heading hierarchy, ARIA labels for interactive elements, and form semantics for knowledge checks. This isn't just screen-reader support; it's good information architecture. Semantic markup makes content scannable and understandable for everyone.</p>
+
+      <p><strong>Keyboard navigation</strong> — All interactive elements (video controls, tooltips, knowledge checks) work via keyboard. Some students prefer keyboard; some have mobility considerations. Keyboard support is a web fundamental, not a special accommodation.</p>
+
+      <p><strong>Color contrast</strong> — All text meets WCAG AA standards (4.5:1 for normal text, 3:1 for large). This helps people with low vision AND improves readability for everyone, especially on mobile devices or in bright environments.</p>
+
+      <p><strong>Focus indicators</strong> — Clear, visible focus states on all interactive elements. This helps users navigate without a mouse and signals to everyone where they are in the interface.</p>
+
+      <hr />
+
+      <h2>Key Design Decisions &amp; Rationale</h2>
+
+      <h3>1. Visual Hierarchy Over Content Equity</h3>
+      <p>The instructional content included 13 sections of varying importance. Rather than give everything equal visual weight, I prioritized: hero video gets substantial real estate; expert interviews are positioned before supporting content; knowledge checks are visually distinct from explanatory text. Clear hierarchy makes complex content navigable. Every design choice answers: "Where should the student's attention go first?"</p>
+
+      <h3>2. Whitespace &amp; Pacing for Cognitive Load</h3>
+      <p>Dense content creates cognitive overload. By giving each section breathing room—generous padding, clear visual separation, whitespace between elements these 13 sections of content feel manageable. Each content block is visually distinct, creating natural pauses so students don't feel overwhelmed. The page feels spacious, not crowded, even with substantial content.</p>
+
+      <h3>3. Semantic Layout: Making Relationships Visible</h3>
+      <p>The content is spatially organized to create visual relationships: expert interviews are positioned before scenarios they address; data visualizations appear with context-setting text; pull quotes break up sections naturally. <strong>Spatial organization</strong> tells students how content connects, supporting understanding without extra explanation.</p>
+
+      <h3>4. Progressive Disclosure: Reducing Cognitive Friction</h3>
+      <p>Tooltips reveal definitions on demand; knowledge checks integrate naturally into the flow rather than feeling like separate tests; secondary expert videos appear contextually. This design pattern respects learner agency and prevents information overload by presenting only what's immediately relevant.</p>
+
+      <h3>5. Animation for Meaning, Not Distraction</h3>
+      <p>CSS animations reveal the 69% statistic progressively, making the data emotionally impactful. Framework elements fade in to indicate progression. But every animation has purpose, and all animations respect motion-sensitivity preferences. Animation isn't decoration; it's a design tool for directing attention and creating emotional resonance and it's always optional for users who need it to be.</p>
+
+      <h3>6. Typography &amp; Color for Clarity</h3>
+      <p>Typography is warm (serif for body creates readability and accessibility) but professional. Color is purposeful: blue for action items, emphasis colors for key concepts. Headings have clear hierarchy. Contrast meets WCAG AA standards, supporting readability in varying lighting conditions.</p>
+
+      <hr />
+
+      <h2>Design Process &amp; Collaboration</h2>
+
+      <p><strong>Development:</strong> I built the module in custom HTML/CSS/JavaScript with accessibility integrated throughout. Semantic markup from the start; animations tested against motion-sensitivity guidelines; focus management and ARIA labels implemented.</p>
+
+      <p><strong>Feedback &amp; Refinement:</strong> Stakeholders, project partners, and a student sampling tested the module. Feedback centered on clarity (Could you find information easily? Did content feel overwhelming?) and confidence (Did you understand what to apply?). Iterations refined visual pacing, whitespace, animation timing, and information grouping based on how learners actually navigated the module.</p>
+
+      <h2>Outcomes &amp; Impact</h2>
+
+      <h3>Design Impact: How Visual Design Enabled Learning</h3>
+      <ul>
+        <li><strong>Clarity over cognitive overload:</strong> The layout made 13 sections feel navigable, not overwhelming. Students reported "not feeling lost in the content" compared to dense text modules.</li>
+        <li><strong>Natural pacing:</strong> Whitespace, visual grouping, and pull quotes created natural pauses in the experience. Users felt like they could breathe through the module, not rush through it.</li>
+        <li><strong>Visual guidance:</strong> Clear hierarchy and spatial organization meant students understood what to focus on at each moment, reducing cognitive friction.</li>
+      </ul>
+
+      <h3>User Feedback: Learning Outcomes</h3>
+      <ul>
+        <li><strong>Engagement:</strong> Students reported enjoying the module more than text-heavy training. Visual variety and pacing kept attention high.</li>
+        <li><strong>Relevance:</strong> Active engagement and expert videos made content feel immediately applicable. "I saw myself in these situations."</li>
+        <li><strong>Confidence:</strong> 87% of learners reported feeling more confident in relationship-building strategies post-module.</li>
+        <li><strong>Retention:</strong> Knowledge checks felt natural, not evaluative. Students reported remembering key concepts better than with lecture-based training.</li>
+      </ul>
+
+      <h3>Adoption &amp; Usage</h3>
+      <ul>
+        <li>The module became standard in this course and was later adopted as a format for a variety of courses.</li>
+        <li>Completion rates exceeded comparable text-based modules by 23% (higher engagement with visually clear, paced content).</li>
+        <li>The module required less instructor support — the visual design made content self-explanatory, reducing questions and support burden.</li>
+      </ul>
+
+      <h2>Technical Implementation: Building for Clarity &amp; Accessibility</h2>
+
+      <p>Built with <strong>semantic HTML, custom CSS, and vanilla JavaScript</strong>, every technical choice supported the design goals of clarity and cognitive load management.</p>
+
+      <h3>Semantic HTML as Information Architecture</h3>
+      <p>Proper heading hierarchy created visual structure and scannability for all users. Semantic elements signaled content relationships and let browsers render the content intelligently. This also made the codebase maintainable; future developers could understand content structure without guessing.</p>
+
+      <h3>Maintainability &amp; Modular Design</h3>
+      <p>Modular component structure allows instructional designers to update expert videos, knowledge checks, or scenario cards without touching code. The design layer is separate from content; this makes iteration faster and reduces the need for developer involvement in content updates.</p>
+
+      <h2>What I'd Do Differently (Design Reflections)</h2>
+
+      <ul>
+        <li><strong>Earlier Usability Testing on Pacing:</strong> Testing interactive prototypes with users earlier would have validated visual pacing decisions. I relied on wireframes and instructional designer feedback; getting real users clicking through interactive prototypes would have caught subtle cognitive load issues sooner (e.g., "Did that video section feel too long before the next break?").</li>
+        <li><strong>Mobile-First Design Process:</strong> I designed desktop-first then adapted to mobile. Reverse engineering this would have forced me to prioritize from the start. Mobile constraints push toward better information hierarchy—something that helps desktop versions too.</li>
+      </ul>
+
+      <h2>Skills Demonstrated</h2>
+
+      <ul>
+        <li><strong>Information Architecture &amp; Visual Hierarchy:</strong> Organizing complex content (13 sections, multiple content types) into a clear, navigable structure. Spatial relationships communicate content connections without extra explanation.</li>
+        <li><strong>Cognitive Load Management:</strong> Using whitespace, pacing, progressive disclosure, and visual grouping to make complex content feel manageable. Every design decision aims to reduce unnecessary cognitive friction.</li>
+        <li><strong>Interaction Design:</strong> Knowledge checks, tooltips, video - all designed as integrated experiences, not separate elements. Clear states, intuitive affordances, and feedback that guide users without disruption.</li>
+        <li><strong>Accessibility as Design Practice:</strong> WCAG 2.1 AA compliance, but more importantly: understanding that captions are content strategy, keyboard navigation is efficiency, semantic HTML is clarity, color contrast is readability. Accessibility improves design for everyone.</li>
+        <li><strong>Frontend Development:</strong> Semantic HTML, responsive CSS, vanilla JavaScript, CSS animation. Building for real-world constraints (variable bandwidth, diverse devices, accessibility tools).</li>
+        <li><strong>Collaboration:</strong> Working effectively with instructional designers, subject matter experts, and end-users. Understanding that my role was translating pedagogy into visual design, not making instructional decisions.</li>
+        <li><strong>Web Standards &amp; Best Practices:</strong> Semantic markup, performance optimization, responsive design, accessibility compliance, and keyboard navigation—not as separate concerns but as integrated design principles.</li>
+      </ul>
+
+    </main>
+  </div>
+</Layout>
